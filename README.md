@@ -64,3 +64,9 @@ proyecto-eli
  datos_sistema.json  # Base de datos local (autogenerado)
  package.json        # Dependencias y scripts
  tsconfig.json       # Configuración de TypeScript
+
+ *Echo con pucho ezfuerzo por*
+ 
+ *Angel Axel Gonzalez Cruz
+ *Roger Hassan Diaz Garcia 
+ *Josue Martin Anguiano de la Cruz
