@@ -1,0 +1,894 @@
+{
+  "address": "H7PyhEsvDRsWkqyHdbJ8oJ17W6EA2tR4eG5ruJCECQac",
+  "metadata": {
+    "name": "proyecto_eli_solana",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "actualizar_cliente",
+      "discriminator": [
+        203,
+        17,
+        140,
+        69,
+        200,
+        249,
+        196,
+        50
+      ],
+      "accounts": [
+        {
+          "name": "cliente",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  105,
+                  101,
+                  110,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "id"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "_id",
+          "type": "string"
+        },
+        {
+          "name": "nombre",
+          "type": "string"
+        },
+        {
+          "name": "telefono",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "direccion",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "actualizar_producto",
+      "discriminator": [
+        210,
+        164,
+        52,
+        252,
+        33,
+        7,
+        60,
+        41
+      ],
+      "accounts": [
+        {
+          "name": "producto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  100,
+                  117,
+                  99,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "codigo"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "_codigo",
+          "type": "string"
+        },
+        {
+          "name": "nombre",
+          "type": "string"
+        },
+        {
+          "name": "precio",
+          "type": "u64"
+        },
+        {
+          "name": "costo",
+          "type": "u64"
+        },
+        {
+          "name": "cantidad",
+          "type": "u64"
+        },
+        {
+          "name": "categoria",
+          "type": "string"
+        },
+        {
+          "name": "proveedor",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "crear_producto",
+      "discriminator": [
+        25,
+        110,
+        231,
+        187,
+        65,
+        141,
+        133,
+        201
+      ],
+      "accounts": [
+        {
+          "name": "producto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  100,
+                  117,
+                  99,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "codigo"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "codigo",
+          "type": "string"
+        },
+        {
+          "name": "nombre",
+          "type": "string"
+        },
+        {
+          "name": "precio",
+          "type": "u64"
+        },
+        {
+          "name": "costo",
+          "type": "u64"
+        },
+        {
+          "name": "cantidad",
+          "type": "u64"
+        },
+        {
+          "name": "categoria",
+          "type": "string"
+        },
+        {
+          "name": "proveedor",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "crear_proveedor",
+      "discriminator": [
+        98,
+        98,
+        194,
+        155,
+        218,
+        38,
+        30,
+        24
+      ],
+      "accounts": [
+        {
+          "name": "proveedor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  118,
+                  101,
+                  101,
+                  100,
+                  111,
+                  114
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "id"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "nombre",
+          "type": "string"
+        },
+        {
+          "name": "contacto",
+          "type": "string"
+        },
+        {
+          "name": "telefono",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "direccion",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "eliminar_cliente",
+      "discriminator": [
+        205,
+        132,
+        251,
+        133,
+        247,
+        51,
+        204,
+        55
+      ],
+      "accounts": [
+        {
+          "name": "cliente",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  105,
+                  101,
+                  110,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "id"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "eliminar_producto",
+      "discriminator": [
+        153,
+        235,
+        155,
+        3,
+        8,
+        167,
+        242,
+        166
+      ],
+      "accounts": [
+        {
+          "name": "producto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  114,
+                  111,
+                  100,
+                  117,
+                  99,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "codigo"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "codigo",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "registrar_cliente",
+      "discriminator": [
+        122,
+        62,
+        186,
+        70,
+        134,
+        117,
+        239,
+        10
+      ],
+      "accounts": [
+        {
+          "name": "cliente",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  105,
+                  101,
+                  110,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "id"
+              },
+              {
+                "kind": "account",
+                "path": "autor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "autor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "name": "nombre",
+          "type": "string"
+        },
+        {
+          "name": "telefono",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "direccion",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "registrar_venta",
+      "discriminator": [
+        47,
+        95,
+        122,
+        187,
+        82,
+        62,
+        119,
+        131
+      ],
+      "accounts": [
+        {
+          "name": "venta",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  101,
+                  110,
+                  116,
+                  97
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "folio"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vendedor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "folio",
+          "type": "string"
+        },
+        {
+          "name": "items",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "ItemVentaInput"
+              }
+            }
+          }
+        },
+        {
+          "name": "total",
+          "type": "u64"
+        },
+        {
+          "name": "cliente_id",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "descuento",
+          "type": {
+            "option": "u64"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Cliente",
+      "discriminator": [
+        126,
+        253,
+        118,
+        23,
+        130,
+        179,
+        29,
+        228
+      ]
+    },
+    {
+      "name": "Producto",
+      "discriminator": [
+        207,
+        24,
+        37,
+        22,
+        48,
+        57,
+        208,
+        98
+      ]
+    },
+    {
+      "name": "Proveedor",
+      "discriminator": [
+        75,
+        185,
+        135,
+        30,
+        192,
+        245,
+        127,
+        43
+      ]
+    },
+    {
+      "name": "Venta",
+      "discriminator": [
+        46,
+        19,
+        228,
+        71,
+        14,
+        149,
+        86,
+        78
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Cliente",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "telefono",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "direccion",
+            "type": "string"
+          },
+          {
+            "name": "fecha_registro",
+            "type": "i64"
+          },
+          {
+            "name": "compras_totales",
+            "type": "u64"
+          },
+          {
+            "name": "monto_total",
+            "type": "u64"
+          },
+          {
+            "name": "ultima_compra",
+            "type": {
+              "option": "i64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemVenta",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "codigo",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "precio",
+            "type": "u64"
+          },
+          {
+            "name": "cantidad",
+            "type": "u64"
+          },
+          {
+            "name": "subtotal",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemVentaInput",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "codigo",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "precio",
+            "type": "u64"
+          },
+          {
+            "name": "cantidad",
+            "type": "u64"
+          },
+          {
+            "name": "subtotal",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Producto",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "autor",
+            "type": "pubkey"
+          },
+          {
+            "name": "codigo",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "precio",
+            "type": "u64"
+          },
+          {
+            "name": "costo",
+            "type": "u64"
+          },
+          {
+            "name": "cantidad",
+            "type": "u64"
+          },
+          {
+            "name": "categoria",
+            "type": "string"
+          },
+          {
+            "name": "proveedor",
+            "type": "string"
+          },
+          {
+            "name": "fecha_agregado",
+            "type": "i64"
+          },
+          {
+            "name": "ultima_actualizacion",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Proveedor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "contacto",
+            "type": "string"
+          },
+          {
+            "name": "telefono",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "direccion",
+            "type": "string"
+          },
+          {
+            "name": "productos",
+            "type": {
+              "vec": "string"
+            }
+          },
+          {
+            "name": "fecha_registro",
+            "type": "i64"
+          },
+          {
+            "name": "calificacion",
+            "type": "u64"
+          },
+          {
+            "name": "activo",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Venta",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "folio",
+            "type": "string"
+          },
+          {
+            "name": "fecha",
+            "type": "i64"
+          },
+          {
+            "name": "vendedor",
+            "type": "pubkey"
+          },
+          {
+            "name": "items",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "ItemVenta"
+                }
+              }
+            }
+          },
+          {
+            "name": "total",
+            "type": "u64"
+          },
+          {
+            "name": "productos",
+            "type": "u64"
+          },
+          {
+            "name": "cliente_id",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "descuento",
+            "type": {
+              "option": "u64"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
