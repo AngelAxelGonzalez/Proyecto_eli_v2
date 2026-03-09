@@ -71,10 +71,12 @@ await client.crearProducto(
   "Botanas", 
   "Sabritas"
 );
+
 echo por
 
 • Roger Hassan Díaz García  
 • Ángel Axel González Cruz 
 • Josué Martín Anguiano de la Cruz  
+
 
 (Lo hicimos en conjunto por que solo uno tiene PC )
