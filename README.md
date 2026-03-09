@@ -1,69 +1,42 @@
- Proyecto ELI - Sistema de Gestión Comercial CRUD
+📦 Sistema de Gestión Comercial 
+- Proyecto Eli v2
 
-¿Que es Proyecto ELI? es una solución integral de gestión comercial desarrollada en *TypeScript*. Este sistema permite administrar inventarios, ventas, clientes, proveedores y usuarios a través de una interfaz de consola interactiva y robusta, con persistencia de datos local.
+¡Bienvenido al Proyecto Eli! Este es un sistema integral de gestión comercial desarrollado en Rust, diseñado para administrar inventarios, ventas, clientes, proveedores y usuarios de forma eficiente y segura.
 
----
+🚀 ¿Qué hace este código?
+El sistema funciona como un asistente administrativo completo (estilo "Jarvis" para negocios) con las siguientes capacidades:
 
- Características Principales
+*Gestión de Inventario: Permite crear, buscar, actualizar y eliminar productos, incluyendo un análisis financiero de inversión y ganancia potencial.
 
-* Gestión Integral (CRUD): Control total sobre Inventario, Ventas, Clientes, Proveedores, Categorías y Usuarios.
-* Seguridad: Sistema de permisos basado en roles (Admin, Vendedor, Invitado).
-* Inteligencia de Negocio: Reportes financieros, estadísticas en tiempo real y alertas de stock bajo.
-* Automatización: Reversión automática de inventario al cancelar ventas y conteo de productos por categoría.
-* Persistencia: Almacenamiento automático en archivos JSON (no requiere bases de datos externas).
-* Robustez: Validaciones en todas las operaciones y tipado fuerte gracias a TypeScript.
+*Alertas de Stock: El sistema verifica automáticamente si algún producto tiene 5 unidades o menos y lanza una alerta roja al iniciar.
 
- 🛠️ Requisitos del Sistema
+*Módulo de Ventas: Registro de ventas con folios automáticos, aplicación de descuentos y actualización inmediata del inventario.
 
-Antes de comenzar, asegúrate de tener instalado:
-* [Node.js](https://nodejs.org/) (v14 o superior)
-* npm (incluido con Node.js)
+*Control de Usuarios y Permisos: Sistema de Login seguro con roles (Admin, Vendedor, Invitado). Los permisos son granulares: puedes decidir quién puede borrar productos y quién solo puede verlos.
 
- Instalación y Configuración
+Persistencia de Datos: Toda la información se guarda automáticamente en un archivo datos_sistema.json, por lo que no pierdes nada al cerrar el programa.
 
-1. Clonar el proyecto y preparar carpetas:
+*Reportes: Generación de reportes financieros, de inventario y de clientes detallados en consola.
 
-    bash
-    mkdir proyecto-eli
-    cd proyecto-eli
-    mkdir src
-    
+🛠️ Requisitos para que "jale" (Instalación)
+Para ejecutar este proyecto en un entorno Linux o GitHub Codespaces, necesitas instalar lo siguiente:
 
-2. Instalar dependencias:
-    bash
-    npm install
-    
+ Rust y Cargo
+Es el motor principal. Si no lo tienes, instala con este comando en la terminal:
 
-3. Compilar el código:
-    bash
-    npm run build
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env
 
-🎮 Ejecución
+Dependencias (Cargo.toml)
 
-Para iniciar el sistema, puedes usar cualquiera de los siguientes comandos:
+El proyecto utiliza librerías externas que deben estar en tu archivo Cargo.toml:
+serde y serde_json: Para el manejo de archivos JSON.
+chrono: Para el manejo de fechas y horas reales.
+tokio: Para permitir funciones asíncronas (async/await).
 
- *Modo Producción :
-    bash
-    npm start
-    
-* Modo Desarrollo :
-    bash
-    npm run dev
-    
+Credenciales por defecto:
 
- Credenciales por Defecto
-Al ejecutar el programa por primera vez, utiliza:
-* Usuario: admin
-* Contraseña: admin123
- 📂 Estructura del Proyecto
-
-
-proyecto-eli
- src/                # Código fuente (.ts)
- dist/               # Código compilado (.js)
- datos_sistema.json  # Base de datos local (autogenerado)
- package.json        # Dependencias y scripts
- tsconfig.json       # Configuración de TypeScript
+Usuario: admin
+Contraseña: admin123
 
  *Echo con pucho ezfuerzo por*
  

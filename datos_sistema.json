@@ -4,7 +4,7 @@
       "usuario": "admin",
       "contrasena": "admin123",
       "nombre": "Administrador",
-      "rol": "admin",
+      "rol": "Admin",
       "permisos": {
         "inventario": {
           "crear": true,
@@ -45,171 +45,25 @@
         "reportes": true,
         "configuracion": true
       },
-      "fecha_registro": "2026-03-08T22:45:51.868Z",
-      "ultimo_acceso": "2026-03-08T22:46:00.656Z"
-    },
-    {
-      "usuario": "Joss",
-      "contrasena": "101705",
-      "nombre": "josue martin anguiano de la cruz",
-      "rol": "vendedor",
-      "permisos": {
-        "inventario": {
-          "crear": false,
-          "leer": true,
-          "actualizar": false,
-          "eliminar": false
-        },
-        "ventas": {
-          "crear": true,
-          "leer": true,
-          "actualizar": true,
-          "eliminar": false
-        },
-        "clientes": {
-          "crear": true,
-          "leer": true,
-          "actualizar": true,
-          "eliminar": false
-        },
-        "proveedores": {
-          "crear": false,
-          "leer": true,
-          "actualizar": false,
-          "eliminar": false
-        },
-        "categorias": {
-          "crear": false,
-          "leer": true,
-          "actualizar": false,
-          "eliminar": false
-        },
-        "usuarios": {
-          "crear": false,
-          "leer": false,
-          "actualizar": false,
-          "eliminar": false
-        },
-        "reportes": false,
-        "configuracion": false
-      },
-      "fecha_registro": "2026-03-08T22:55:51.531Z"
+      "fecha_registro": "2026-03-09T07:22:27.558365160+00:00",
+      "ultimo_acceso": "2026-03-09T07:22:49.032989034+00:00"
     }
   ],
   "productos": [
     {
       "codigo": "1",
       "nombre": "Papas",
-      "precio": 20,
-      "costo": 14,
-      "cantidad": 17,
-      "categoria": "Sabritas",
-      "proveedor": "sabritas",
-      "fecha_agregado": "2026-03-08T22:48:20.480Z",
-      "ultima_actualizacion": "2026-03-08T22:52:06.000Z"
-    },
-    {
-      "codigo": "2",
-      "nombre": "Mazapan",
-      "precio": 6,
-      "costo": 3.5,
-      "cantidad": 36,
-      "categoria": "dulces",
-      "proveedor": "De la rosa",
-      "fecha_agregado": "2026-03-08T22:48:59.006Z",
-      "ultima_actualizacion": "2026-03-08T22:52:06.000Z"
-    },
-    {
-      "codigo": "3",
-      "nombre": "chicle orbit",
-      "precio": 3,
-      "costo": 1.5,
-      "cantidad": 25,
-      "categoria": "Dulces",
-      "proveedor": "Orbit",
-      "fecha_agregado": "2026-03-08T22:50:12.646Z",
-      "ultima_actualizacion": "2026-03-08T22:52:06.000Z"
+      "precio": 15.0,
+      "costo": 10.0,
+      "cantidad": 20,
+      "categoria": "Papas y frituras",
+      "proveedor": "n/a",
+      "fecha_agregado": "2026-03-09T07:23:31.205569355+00:00",
+      "ultima_actualizacion": "2026-03-09T07:23:31.205604741+00:00"
     }
   ],
-  "clientes": [
-    {
-      "id": "C0001",
-      "nombre": "Angel",
-      "telefono": "4492302140",
-      "email": "no tiene",
-      "direccion": "villas",
-      "fecha_registro": "2026-03-08T22:54:06.511Z",
-      "compras_totales": 0,
-      "monto_total": 0
-    },
-    {
-      "id": "C0002",
-      "nombre": "ronny",
-      "telefono": "4493562140",
-      "email": "ronny@gmail.com",
-      "direccion": "villa montaña",
-      "fecha_registro": "2026-03-08T22:54:42.131Z",
-      "compras_totales": 0,
-      "monto_total": 0
-    }
-  ],
-  "ventas": [
-    {
-      "folio": "V0001",
-      "fecha": "2026-03-08T22:52:06.000Z",
-      "vendedor": "Administrador",
-      "items": [
-        {
-          "codigo": "1",
-          "nombre": "Papas",
-          "precio": 20,
-          "cantidad": 3,
-          "subtotal": 60
-        },
-        {
-          "codigo": "3",
-          "nombre": "chicle orbit",
-          "precio": 3,
-          "cantidad": 15,
-          "subtotal": 45
-        },
-        {
-          "codigo": "2",
-          "nombre": "Mazapan",
-          "precio": 6,
-          "cantidad": 4,
-          "subtotal": 24
-        }
-      ],
-      "total": 129,
-      "productos": 3
-    }
-  ],
-  "proveedores": [
-    {
-      "id": "PROV0001",
-      "nombre": "sabritas",
-      "contacto": "Arnoldo",
-      "telefono": "3322118913",
-      "email": "no tiene",
-      "direccion": "calle del valle",
-      "productos": [
-        "1"
-      ],
-      "fecha_registro": "2026-03-08T22:47:12.139Z",
-      "calificacion": 0,
-      "total_compras": 0,
-      "activo": true
-    }
-  ],
-  "categorias": [
-    {
-      "id": "CAT0001",
-      "nombre": "Dulces",
-      "descripcion": "Sin descripción",
-      "fecha_creacion": "2026-03-08T22:56:17.481Z",
-      "total_productos": 0,
-      "activo": true
-    }
-  ]
+  "clientes": [],
+  "ventas": [],
+  "proveedores": [],
+  "categorias": []
 }

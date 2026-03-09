@@ -1,16 +1,7 @@
 {
-  "name": "proyecto-eli",
-  "version": "2.0.0",
-  "description": "Sistema de gestión comercial con CRUD completo",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
-  },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^25.3.5",
-    "ts-node": "^10.9.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3"
   }
 }
