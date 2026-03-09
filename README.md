@@ -12,30 +12,34 @@ El sistema funciona como un asistente administrativo completo (estilo "Jarvis" p
 
 *Módulo de Ventas: Registro de ventas con folios automáticos, aplicación de descuentos y actualización inmediata del inventario.
 
-*Control de Usuarios y Permisos: Sistema de Login seguro con roles (Admin, Vendedor, Invitado). Los permisos son granulares: puedes decidir quién puede borrar productos y quién solo puede verlos.
+*Control de Usuarios y Permisos: Sistema de Login seguro con roles (Admin, Vendedor, Invitado).
+
+* Los permisos son granulares: puedes decidir quién puede borrar productos y quién solo puede verlos.
 
 Persistencia de Datos: Toda la información se guarda automáticamente en un archivo datos_sistema.json, por lo que no pierdes nada al cerrar el programa.
 
 *Reportes: Generación de reportes financieros, de inventario y de clientes detallados en consola.
 
-🛠️ Requisitos para que "jale" (Instalación)
+🛠️ Requisitos para que jale
 Para ejecutar este proyecto en un entorno Linux o GitHub Codespaces, necesitas instalar lo siguiente:
 
  Rust y Cargo
 Es el motor principal. Si no lo tienes, instala con este comando en la terminal:
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env
+*curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env*
 
 Dependencias (Cargo.toml)
 
 El proyecto utiliza librerías externas que deben estar en tu archivo Cargo.toml:
-serde y serde_json: Para el manejo de archivos JSON.
-chrono: Para el manejo de fechas y horas reales.
-tokio: Para permitir funciones asíncronas (async/await).
+
+*serde y serde_json: Para el manejo de archivos JSON.*
+*chrono: Para el manejo de fechas y horas reales.*
+*tokio: Para permitir funciones asíncronas (async/await).*
 
 Credenciales por defecto:
 
 Usuario: admin
+
 Contraseña: admin123
 
  *Echo con pucho ezfuerzo por*
