@@ -1,49 +1,105 @@
-📦 Sistema de Gestión Comercial 
-- Proyecto Eli v2
+*Proyecto eli v2*
 
-¡Bienvenido al Proyecto Eli! Este es un sistema integral de gestión comercial desarrollado en Rust, diseñado para administrar inventarios, ventas, clientes, proveedores y usuarios de forma eficiente y segura.
+ Un sistema completo de gestión comercial construido sobre la blockchain de Solana. Incluye control de inventario, ventas, clientes, proveedores, sistema de puntos, facturación electrónica, múltiples sucursales, dashboard en tiempo real y notificaciones automatizadas (aun no funcionan ☹).
 
-🚀 ¿Qué hace este código?
-El sistema funciona como un asistente administrativo completo (estilo "Jarvis" para negocios) con las siguientes capacidades:
+*🔐 Credenciales por Defecto*
 
-*Gestión de Inventario: Permite crear, buscar, actualizar y eliminar productos, incluyendo un análisis financiero de inversión y ganancia potencial.
-
-*Alertas de Stock: El sistema verifica automáticamente si algún producto tiene 5 unidades o menos y lanza una alerta roja al iniciar.
-
-*Módulo de Ventas: Registro de ventas con folios automáticos, aplicación de descuentos y actualización inmediata del inventario.
-
-*Control de Usuarios y Permisos: Sistema de Login seguro con roles (Admin, Vendedor, Invitado).
-
-* Los permisos son granulares: puedes decidir quién puede borrar productos y quién solo puede verlos.
-
-Persistencia de Datos: Toda la información se guarda automáticamente en un archivo datos_sistema.json, por lo que no pierdes nada al cerrar el programa.
-
-*Reportes: Generación de reportes financieros, de inventario y de clientes detallados en consola.
-
-🛠️ Requisitos para que jale
-Para ejecutar este proyecto en un entorno Linux o GitHub Codespaces, necesitas instalar lo siguiente:
-
- Rust y Cargo
-Es el motor principal. Si no lo tienes, instala con este comando en la terminal:
-
-*curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source $HOME/.cargo/env*
-
-Dependencias (Cargo.toml)
-
-El proyecto utiliza librerías externas que deben estar en tu archivo Cargo.toml:
-
-*serde y serde_json: Para el manejo de archivos JSON.*
-*chrono: Para el manejo de fechas y horas reales.*
-*tokio: Para permitir funciones asíncronas (async/await).*
-
-Credenciales por defecto:
+⚠️ IMPORTANTE: Estas credenciales son solo para desarrollo. En producción, cambia la contraseña inmediatamente.
 
 Usuario: admin
-
 Contraseña: admin123
+Rol: Administrador
+Permisos: Todos los permisos habilitados
 
- *Echo con pucho ezfuerzo por*
+*Niveles de Cliente y Puntos*
+
+Nivel Puntos Requeridos Descuento Multiplicador
+🥉 Bronce 0 - 999 0% 1.0x
+🥈 Plata 1,000 - 4,999 2% 1.2x
+🥇 Oro 5,000 - 19,999 5% 1.5x
+💎 Platino 20,000 - 99,999 10% 2.0x
+👑 Diamante 100,000+ 15% 2.5x
+
+*1. 📦 Inventario*
+
+· Crear producto: Registra nuevo producto con código, nombre, precio, costo, cantidad, ubicación y lote
+· Ver productos: Lista todos los productos con stock actual
+· Buscar producto: Búsqueda avanzada por nombre, código, categoría, precio, stock
+· Editar producto: Actualiza información del producto
+· Eliminar producto: Elimina producto (con verificación de ventas asociadas)
+· Kardex: Historial completo de movimientos de inventario
+· Stock bajo: Lista productos con ≤ 5 unidades
+
+*2. 💰 Ventas*
+
+· Registrar venta: Proceso completo con selección de cliente, productos, descuentos y puntos
+· Ver ventas: Historial con filtros por fecha, cliente, vendedor
+· Editar venta: Modificar ventas existentes
+· Cancelar venta: Anular venta y restaurar inventario
+· Estadísticas: Análisis de ventas por período, productos más vendidos
+
+*3. 👥 Clientes*
+
+· Registrar cliente: Creación de cliente con datos personales y fiscales
+· Programa fidelidad: Acumulación de puntos y niveles
+· Historial de compras: Detalle de todas las compras del cliente
+
+*4. ⭐ Sistema de Puntos*
+
+· Acumulación: 1 punto por cada $10 gastados (multiplicador por nivel)
+· Canje: 10 puntos = $1 de descuento
+· Niveles: Bronce → Plata → Oro → Platino → Diamante
+
+*5. 📄 Facturación*
+
+· Generar factura: CFDI con RFC, régimen fiscal, IVA
+· Ver facturas: Listado de facturas generadas
+
+*6. 🏭 Múltiples Sucursales*
+
+· Transferir productos: Mover inventario entre sucursales
+· Inventario por sucursal: Control descentralizado
+
+*7. 📊 Dashboard Tiempo Real*
+
+· Métricas: Ventas hoy, este mes, promedio
+· Gráficos: Ventas por hora
+· Alertas: Stock bajo, productos por caducar
+
+*8. 🔔 Notificaciones(Aun no lo logramos hacer jalar ☹)*
+
+· Alertas automáticas: Stock bajo, productos por caducar
+· Notificaciones manuales: Para eventos importantes
+
+*9. 🤖 *Chatbot Inteligente*
+
+- Responde preguntas sobre stock, precios y ventas
+- Procesa lenguaje natural (preguntas en español)
+- Ayuda a los clientes 24/7
+- Comandos: "¿Hay laptops?", "¿Cuánto cuesta un mouse?", "Ventas de hoy"
+
+*10. 🧠 *IA Predictiva*
+
+- Predice ventas futuras basado en datos históricos
+- Detecta productos con stock bajo automáticamente
+- Genera recomendaciones inteligentes
+- Analiza tendencias de ventas
+
+*11. 💱 Múltiples Monedas*
+
+- Soporte para USD, EUR, MXN, CAD, GBP, JPY
+- Tipos de cambio en tiempo real
+- Conversión automática en ventas
+- Formatea precios en cualquier moneda
+
+· Blockchain: Solana
+· Framework: Anchor
+· Lenguajes: Rust, TypeScript
+· Compromise: NLP para el chatbot 
+·Axios: API de tipos de cambio 
+
+echo por
  
- *Angel Axel Gonzalez Cruz
- *Roger Hassan Diaz Garcia 
- *Josue Martin Anguiano de la Cruz
+• Angel Axel González Cruz 
+• Hasly Jocelyn González Macias 
+
