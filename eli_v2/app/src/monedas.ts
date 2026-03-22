@@ -42,7 +42,9 @@ export class ServicioMonedas {
         try {
             console.log("🔄 Actualizando tipos de cambio...");
             const response = await axios.get(this.apiUrl);
-            const rates = response.data.rates;
+
+            const data = response.data as any ;
+            const rates = data.rates;
             
             for (const [codigo, moneda] of this.monedas) {
                 if (rates[codigo]) {

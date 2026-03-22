@@ -41,7 +41,7 @@ export class SolanaClient {
         this.provider = new AnchorProvider(this.connection, wallet, {
             commitment: "confirmed",
         });
-        this.program = new Program(idl as Idl, PROGRAM_ID, this.provider);
+        this.program = new Program(idl as any, PROGRAM_ID, this.provider);
         console.log("✅ Cliente Solana inicializado");
     }
 

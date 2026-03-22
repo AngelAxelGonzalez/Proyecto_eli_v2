@@ -109,7 +109,7 @@ export class SolanaClient {
     this.creds = new SolanaCredential(network || DEFAULT_NETWORK, programId || DEFAULT_PROGRAM_ID);
     this.connection = this.creds.getConnection();
     this.provider = this.creds.createProvider(wallet);
-    this.program = new Program(idl as Idl, this.creds.getProgramId(), this.provider);
+    this.program = new Program(idl as any, this.creds.getProgramId(), this.provider);
     
     console.log("✅ Cliente Solana inicializado con todas las funcionalidades");
   }

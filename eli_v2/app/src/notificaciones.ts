@@ -167,18 +167,27 @@ export class NotificacionesService {
     async verificarCumpleaños(clientes: any[]): Promise<void> {
         const hoy = new Date();
         const hoyStr = '${hoy.getDate()}/${hoy.getMonth() + 1}';
+
+        console.log('🎂 Verificando cumpleaños para hoy: ${hoyStr}');
         
         for (const cliente of clientes) {
-            if (cliente.fechaNacimiento) {
-                const fechaNac = new Date(cliente.fechaNacimiento);
-                const cumpleStr = '${fechaNac.getDate()}/${fechaNac.getMonth() + 1}';
+            if (cliente && cliente.fechaNacimiento) {
+                try{
+                    const fechaNac = new Date(cliente.fechaNacimiento);
+                    const cumpleStr = '${fechaNac.getDate()}/${fechaNac.getMonth() + 1}';
                 
-                if (cumpleStr === hoyStr) {
-                    await this.enviarNotificacion(
-                        "🎂 CUMPLEAÑOS",
-                        '¡El cliente ${cliente.nombre} cumple años hoy! Envíale un saludo especial.',
-                        1
-                    );
+
+                    if (cumpleStr === hoyStr) {
+                       await this.enviarNotificacion(
+                           "🎂 CUMPLEAÑOS",
+                           '¡El cliente ${cliente.nombre} cumple años hoy! Envíale un saludo especial.',
+                           1
+                       );
+                       console.log('Cumpleaños detectado: ${cliente.nombre}');
+                   }
+                
+                }catch (error){
+                   console.error('Error verificando cumpleaños para ${cliente.nombre]');
                 }
             }
         }
